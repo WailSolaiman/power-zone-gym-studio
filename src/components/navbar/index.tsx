@@ -8,18 +8,26 @@ import useMediaQuery from "@/hooks/useMediaQuery";
 import Logo from "@/assets/Logo.png";
 
 type NavbarProps = {
+  isTopOfPage: boolean;
   selectedPage: SelectedPage;
   setSelectedPage: (value: SelectedPage) => void;
 };
 
-const Navbar = ({ selectedPage, setSelectedPage }: NavbarProps) => {
+const Navbar = ({
+  isTopOfPage,
+  selectedPage,
+  setSelectedPage,
+}: NavbarProps) => {
   const [isMenuToggled, setIsMenuToggled] = useState<boolean>(false);
+  const navbarBackground = isTopOfPage ? "" : "bg-primary-100 drop-shadow";
   const flexBetween = "flex items-center justify-between";
   const isAbove1060 = useMediaQuery("(min-width: 1060px)");
 
   return (
     <nav>
-      <div className={`${flexBetween} fixed top-0 z-30 w-full py-6`}>
+      <div
+        className={`${navbarBackground} ${flexBetween} fixed top-0 z-30 w-full py-6`}
+      >
         <div className={`${flexBetween} mx-auto w-5/6`}>
           <div className={`${flexBetween} w-full gap-16`}>
             {/* LEFT SIDE */}
