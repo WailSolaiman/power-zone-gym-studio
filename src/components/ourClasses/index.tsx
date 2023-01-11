@@ -1,5 +1,5 @@
 import { SelectedPage, ClassType } from "@/shared/types";
-
+import Class from "./Class";
 import image1 from "@/assets/image1.png";
 import image2 from "@/assets/image2.png";
 import image3 from "@/assets/image3.png";
@@ -7,7 +7,6 @@ import image4 from "@/assets/image4.png";
 import image5 from "@/assets/image5.png";
 import image6 from "@/assets/image6.png";
 import { motion } from "framer-motion";
-import Class from "./Class";
 
 const classes: Array<ClassType> = [
   {
@@ -44,11 +43,11 @@ const classes: Array<ClassType> = [
   },
 ];
 
-type Props = {
+type OurClassesProps = {
   setSelectedPage: (value: SelectedPage) => void;
 };
 
-const OurClasses = ({ setSelectedPage }: Props) => {
+const OurClasses = ({ setSelectedPage }: OurClassesProps) => {
   return (
     <section id="ourclasses" className="w-full bg-primary-100 py-40">
       <motion.div

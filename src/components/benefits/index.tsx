@@ -38,11 +38,11 @@ const container = {
   },
 };
 
-type Props = {
+type BenefitsProps = {
   setSelectedPage: (value: SelectedPage) => void;
 };
 
-const Benefits = ({ setSelectedPage }: Props) => {
+const Benefits = ({ setSelectedPage }: BenefitsProps) => {
   return (
     <section id="benefits" className="mx-auto min-h-full w-5/6 py-20">
       <motion.div
