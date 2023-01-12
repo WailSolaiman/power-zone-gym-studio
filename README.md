@@ -12,7 +12,7 @@ Power zone gym studio webapp using React, TypeScript, Framer Motion, and Tailwin
 
 ## Website
 
-[https://react-crypto-universe-wsolaiman.netlify.app/](https://react-crypto-universe-wsolaiman.netlify.app/)
+[power-zone-gym-studio.netlify.app](power-zone-gym-studio.netlify.app)
 
 ## Developer
 
