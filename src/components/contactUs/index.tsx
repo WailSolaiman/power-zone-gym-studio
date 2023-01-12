@@ -146,7 +146,7 @@ const ContactUs = ({ setSelectedPage }: ContactUsProps) => {
           >
             <div className="w-full before:absolute before:-bottom-20 before:-right-10 before:z-[-1] md:before:content-evolvetext">
               <img
-                className="w-full"
+                className="max-h-96 w-full md:w-auto"
                 alt="contact-us-page-graphic"
                 src={ContactUsPageGraphic}
               />
