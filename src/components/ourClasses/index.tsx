@@ -1,3 +1,5 @@
+import { motion } from "framer-motion";
+
 import { SelectedPage, ClassType } from "@/shared/types";
 import Class from "./Class";
 import image1 from "@/assets/image1.png";
@@ -6,42 +8,48 @@ import image3 from "@/assets/image3.png";
 import image4 from "@/assets/image4.png";
 import image5 from "@/assets/image5.png";
 import image6 from "@/assets/image6.png";
-import { motion } from "framer-motion";
 
 const classes: Array<ClassType> = [
   {
-    name: "Weight Training Classes",
+    name: "Weight floor & strength blocks",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+      "Barbell work, accessory circuits, and coach-led warm-ups so you’re never guessing what “leg day” means at EVOGYM. Racks, plates, and space to breathe between sets.",
     image: image1,
   },
   {
-    name: "Yoga Classes",
+    name: "Yoga & mobility",
     image: image2,
   },
   {
-    name: "Ab Core Classes",
+    name: "Core & conditioning",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+      "Short, focused rounds that build trunk strength and engine without running you into the ground. Great paired with strength days or as a lunch-hour reset.",
     image: image3,
   },
   {
-    name: "Adventure Classes",
+    name: "Outdoor & team sessions",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+      "Weather-friendly outings and small-group challenges when we take the work outside. Think teamwork, fresh air, and coaches who keep the pace honest.",
     image: image4,
   },
   {
-    name: "Fitness Classes",
+    name: "Metabolic & cardio mix",
     image: image5,
   },
   {
-    name: "Training Classes",
+    name: "Small-group training",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+      "Extra eyes on form, shared energy, and programming you can repeat during open gym. Ideal if you like accountability without a spotlight on you.",
     image: image6,
   },
 ];
+
+const container = {
+  hidden: {},
+  visible: {
+    transition: { staggerChildren: 0.08 },
+  },
+};
 
 type OurClassesProps = {
   setSelectedPage: (value: SelectedPage) => void;
@@ -49,35 +57,49 @@ type OurClassesProps = {
 
 const OurClasses = ({ setSelectedPage }: OurClassesProps) => {
   return (
-    <section id="ourclasses" className="w-full bg-primary-100 py-40">
-      <motion.div
-        onViewportEnter={() => setSelectedPage(SelectedPage.OurClasses)}
-      >
+    <section
+      id="ourclasses"
+      className="overflow-x-hidden border-t border-gray-100 bg-gradient-to-b from-primary-100/90 via-gray-20 to-primary-100/70"
+    >
+      <div className="mx-auto min-w-0 max-w-6xl px-4 py-16 sm:px-8 sm:py-20 md:py-24">
         <motion.div
-          className="mx-auto w-5/6"
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, amount: 0.5 }}
-          transition={{ duration: 0.5 }}
-          variants={{
-            hidden: { opacity: 0, x: -50 },
-            visible: { opacity: 1, x: 0 },
-          }}
+          onViewportEnter={() => setSelectedPage(SelectedPage.OurClasses)}
         >
-          <div className="md:w-3/5">
-            <h1 className="basis-3/5 font-montserrat text-3xl font-bold">
-              OUR CLASSES
-            </h1>
-            <p className="py-5">
-              Fringilla a sed at suspendisse ut enim volutpat. Rhoncus vel est
-              tellus quam porttitor. Mauris velit euismod elementum arcu neque
-              facilisi. Amet semper tortor facilisis metus nibh. Rhoncus sit
-              enim mattis odio in risus nunc.
+          <motion.div
+            className="max-w-3xl"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.35 }}
+            transition={{ duration: 0.5 }}
+            variants={{
+              hidden: { opacity: 0, y: 20 },
+              visible: { opacity: 1, y: 0 },
+            }}
+          >
+            <p className="font-montserrat text-xs font-bold uppercase tracking-[0.2em] text-primary-500">
+              EVOGYM classes
             </p>
-          </div>
-        </motion.div>
-        <div className="mt-10 h-[353px] w-full overflow-x-auto overflow-y-hidden">
-          <ul className="w-[2800px] whitespace-nowrap">
+            <h2 className="mt-3 font-montserrat text-3xl font-bold leading-tight tracking-tight text-gray-500 min-[400px]:text-4xl">
+              OUR CLASSES
+            </h2>
+            <div
+              className="mt-5 h-1 w-14 rounded-full bg-gradient-to-r from-primary-500 to-secondary-500"
+              aria-hidden
+            />
+            <p className="mt-6 max-w-prose text-sm leading-relaxed text-gray-500/90 sm:text-base">
+              Pick a lane — heavy, sweaty, slow, or restorative — and we’ll help
+              you line it up with the rest of your week at EVOGYM. Schedules shift
+              seasonally; the desk always has the current lineup.
+            </p>
+          </motion.div>
+
+          <motion.ul
+            className="mt-10 grid list-none grid-cols-1 gap-6 xs:grid-cols-2 md:mt-14 md:grid-cols-3 md:gap-8"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.12 }}
+            variants={container}
+          >
             {classes.map((item: ClassType, index) => (
               <Class
                 key={`${item.name}-${index}`}
@@ -86,9 +108,9 @@ const OurClasses = ({ setSelectedPage }: OurClassesProps) => {
                 image={item.image}
               />
             ))}
-          </ul>
-        </div>
-      </motion.div>
+          </motion.ul>
+        </motion.div>
+      </div>
     </section>
   );
 };

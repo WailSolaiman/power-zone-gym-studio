@@ -1,23 +1,50 @@
+import { motion } from "framer-motion";
+
+const item = {
+  hidden: { opacity: 0, y: 18 },
+  visible: { opacity: 1, y: 0 },
+};
+
 type ClassProps = {
   name: string;
   description?: string;
   image: string;
 };
 
-const Class = ({ name, description, image }: ClassProps) => {
-  const overlayStyles = `p-5 absolute z-30 flex
-    h-[380px] w-[450px] flex-col items-center justify-center
-    whitespace-normal bg-primary-500 text-center text-white
-    opacity-0 transition duration-500 hover:opacity-90`;
+const descriptionClass =
+  "line-clamp-4 text-sm font-normal leading-relaxed text-gray-500/90 sm:text-base";
 
+const Class = ({ name, description, image }: ClassProps) => {
   return (
-    <li className="relative mx-5 inline-block h-[380px] w-[450px]">
-      <div className={overlayStyles}>
-        <p className="text-2xl">{name}</p>
-        <p className="mt-5">{description}</p>
+    <motion.li
+      variants={item}
+      className="flex h-full flex-col overflow-hidden rounded-2xl border border-gray-100 bg-gray-20/80 shadow-md shadow-primary-500/5 ring-1 ring-primary-100/50 transition duration-300 hover:-translate-y-0.5 hover:shadow-lg hover:shadow-primary-500/10"
+    >
+      <div className="relative aspect-[4/3] shrink-0 overflow-hidden">
+        <img
+          alt={name}
+          src={image}
+          className="absolute inset-0 h-full w-full object-cover"
+          loading="lazy"
+        />
+        <div
+          className="absolute inset-0 bg-gradient-to-t from-gray-500/95 via-gray-500/35 to-transparent"
+          aria-hidden
+        />
+        <div className="absolute inset-x-0 bottom-0 p-4 sm:p-5">
+          <p className="font-montserrat text-lg font-bold leading-snug tracking-tight text-gray-20 sm:text-xl">
+            {name}
+          </p>
+        </div>
       </div>
-      <img alt={`${image}`} src={image} />
-    </li>
+
+      <div className="flex min-h-[5.5rem] flex-1 flex-col justify-center border-t border-gray-100/90 bg-gray-20/95 px-4 py-4 sm:px-5 sm:py-5">
+        <p className={descriptionClass}>
+          {description ??
+            "Times and coaches rotate — ask the EVOGYM front desk for this week’s schedule or grab a flyer by the smoothie bar."}
+        </p>
+      </div>
+    </motion.li>
   );
 };
 
