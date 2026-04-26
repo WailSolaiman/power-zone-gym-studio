@@ -1,4 +1,4 @@
-# Crypto Universe
+# EVOGYM | Power Zone Gym Studio
 
 ## Introduction
 
@@ -12,7 +12,7 @@ Power zone gym studio webapp using React, TypeScript, Framer Motion, and Tailwin
 
 ## Website
 
-[power-zone-gym-studio.netlify.app](power-zone-gym-studio.netlify.app)
+Live site: [https://evogym.wailsolaiman.com](https://evogym.wailsolaiman.com)
 
 ## Developer
 
