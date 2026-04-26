@@ -1,6 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <script>
+      try {
+        if (localStorage.getItem("evogym-theme") === "dark")
+          document.documentElement.classList.add("dark");
+      } catch (_) {}
+    </script>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="theme-color" content="#FF6B66" />

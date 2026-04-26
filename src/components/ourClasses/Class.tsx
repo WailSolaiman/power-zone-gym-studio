@@ -12,13 +12,13 @@ type ClassProps = {
 };
 
 const descriptionClass =
-  "line-clamp-4 text-sm font-normal leading-relaxed text-gray-500/90 sm:text-base";
+  "line-clamp-4 text-sm font-normal leading-relaxed text-gray-500/90 dark:text-rose-text/90 sm:text-base";
 
 const Class = ({ name, description, image }: ClassProps) => {
   return (
     <motion.li
       variants={item}
-      className="flex h-full flex-col overflow-hidden rounded-2xl border border-gray-100 bg-gray-20/80 shadow-md shadow-primary-500/5 ring-1 ring-primary-100/50 transition duration-300 hover:-translate-y-0.5 hover:shadow-lg hover:shadow-primary-500/10"
+      className="flex h-full flex-col overflow-hidden rounded-2xl border border-gray-100 bg-gray-20/80 shadow-md shadow-primary-500/5 ring-1 ring-primary-100/50 transition duration-300 hover:-translate-y-0.5 hover:shadow-lg hover:shadow-primary-500/10 dark:border-charcoal-700 dark:bg-charcoal-900/85 dark:ring-charcoal-700"
     >
       <div className="relative aspect-[4/3] shrink-0 overflow-hidden">
         <img
@@ -32,13 +32,13 @@ const Class = ({ name, description, image }: ClassProps) => {
           aria-hidden
         />
         <div className="absolute inset-x-0 bottom-0 p-4 sm:p-5">
-          <p className="font-montserrat text-lg font-bold leading-snug tracking-tight text-gray-20 sm:text-xl">
+          <p className="font-bebas-neue text-2xl font-normal uppercase leading-snug tracking-wider text-gray-20 drop-shadow-[0_1px_2px_rgb(0_0_0/0.5)] sm:text-3xl md:text-4xl">
             {name}
           </p>
         </div>
       </div>
 
-      <div className="flex min-h-[5.5rem] flex-1 flex-col justify-center border-t border-gray-100/90 bg-gray-20/95 px-4 py-4 sm:px-5 sm:py-5">
+      <div className="flex min-h-[5.5rem] flex-1 flex-col justify-center border-t border-gray-100/90 bg-gray-20/95 px-4 py-4 dark:border-charcoal-700 dark:bg-charcoal-900/95 sm:px-5 sm:py-5">
         <p className={descriptionClass}>
           {description ??
             "Times and coaches rotate — ask the EVOGYM front desk for this week’s schedule or grab a flyer by the smoothie bar."}

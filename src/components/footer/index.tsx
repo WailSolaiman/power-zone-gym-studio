@@ -69,7 +69,7 @@ const FOOTER_LINKS = [
 
 const Footer = () => {
   return (
-    <footer className="border-t border-gray-100 bg-gradient-to-b from-primary-100/90 via-gray-20 to-primary-100/70">
+    <footer className="border-t border-gray-100 bg-gradient-to-b from-primary-100/90 via-gray-20 to-primary-100/70 dark:border-charcoal-800 dark:from-charcoal-900 dark:via-charcoal-950 dark:to-charcoal-900">
       <div className="mx-auto min-w-0 max-w-6xl px-4 py-14 sm:px-8 sm:py-16 md:py-20">
         <div className="grid gap-12 sm:gap-14 md:grid-cols-12 md:gap-10">
           {/* Brand */}
@@ -77,13 +77,13 @@ const Footer = () => {
             <AnchorLink
               href={`#${SelectedPage.Home}`}
               aria-label={`${BRAND_MARK}, go to home`}
-              className="inline-block focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-500 focus-visible:ring-offset-2 focus-visible:ring-offset-gray-20"
+              className="inline-block focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-500 focus-visible:ring-offset-2 focus-visible:ring-offset-gray-20 dark:focus-visible:ring-offset-charcoal-950"
             >
-              <span className="font-montserrat text-2xl font-bold tracking-tight text-gray-500 sm:text-3xl">
+              <span className="font-bebas-neue text-4xl font-normal uppercase tracking-wider text-gray-500 drop-shadow-[0_1px_0_rgb(94_0_0/0.12)] dark:text-rose-text dark:drop-shadow-[0_2px_6px_rgb(0_0_0/0.5)] sm:text-5xl">
                 {BRAND_MARK}
               </span>
             </AnchorLink>
-            <p className="mt-5 max-w-md text-sm leading-relaxed text-gray-500/90 sm:text-base">
+            <p className="mt-5 max-w-md text-sm leading-relaxed text-gray-500/90 dark:text-rose-text/90 sm:text-base">
               EVOGYM is a training floor for people who like a plan, a coach within
               reach, and a community that shows up on Tuesdays like it matters.
               Strength, classes, and open gym — one membership, zero attitude.
@@ -99,21 +99,21 @@ const Footer = () => {
                     target="_blank"
                     rel="noopener noreferrer"
                     aria-label={`${label} (demo)`}
-                    className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-gray-100 bg-gray-20/90 text-gray-500 shadow-sm ring-1 ring-primary-100/50 transition hover:-translate-y-0.5 hover:border-primary-300 hover:bg-primary-100/80 hover:text-primary-500"
+                    className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-gray-100 bg-gray-20/90 text-gray-500 shadow-sm ring-1 ring-primary-100/50 transition hover:-translate-y-0.5 hover:border-primary-300 hover:bg-primary-100/80 hover:text-primary-500 dark:border-charcoal-700 dark:bg-charcoal-800/90 dark:text-rose-text dark:ring-charcoal-700 dark:hover:border-primary-500/45 dark:hover:bg-charcoal-750 dark:hover:text-primary-500"
                   >
                     {icon}
                   </a>
                 </li>
               ))}
             </ul>
-            <p className="mt-8 text-xs font-medium text-gray-500/75 sm:text-sm">
+            <p className="mt-8 text-xs font-medium text-gray-500/75 dark:text-rose-text-muted sm:text-sm">
               © {new Date().getFullYear()} EVOGYM. All rights reserved.
             </p>
           </div>
 
           {/* Explore */}
           <div className="md:col-span-3">
-            <p className="font-montserrat text-xs font-bold uppercase tracking-[0.18em] text-primary-500">
+            <p className="font-inter text-xs font-semibold uppercase tracking-[0.18em] text-primary-500">
               Explore
             </p>
             <ul className="mt-4 space-y-3">
@@ -121,7 +121,7 @@ const Footer = () => {
                 <li key={page}>
                   <AnchorLink
                     href={`#${page}`}
-                    className="text-sm font-medium text-gray-500 underline-offset-[6px] transition hover:text-primary-500 hover:underline"
+                    className="text-sm font-medium text-gray-500 underline-offset-[6px] transition hover:text-primary-500 hover:underline dark:text-rose-text/90 dark:hover:text-primary-500"
                   >
                     {label}
                   </AnchorLink>
@@ -132,10 +132,10 @@ const Footer = () => {
 
           {/* Contact */}
           <div className="md:col-span-4">
-            <p className="font-montserrat text-xs font-bold uppercase tracking-[0.18em] text-primary-500">
+            <p className="font-inter text-xs font-semibold uppercase tracking-[0.18em] text-primary-500">
               Contact
             </p>
-            <ul className="mt-4 space-y-4 text-sm text-gray-500/90">
+            <ul className="mt-4 space-y-4 text-sm text-gray-500/90 dark:text-rose-text/90">
               <li className="flex gap-3">
                 <MapPinIcon
                   className="mt-0.5 h-5 w-5 shrink-0 text-primary-500"
@@ -143,7 +143,7 @@ const Footer = () => {
                 />
                 <span>
                   123 Training Ave, Suite 100
-                  <span className="mt-0.5 block text-gray-500/75">
+                  <span className="mt-0.5 block text-gray-500/75 dark:text-rose-text-muted">
                     Metro City, ST 00000
                   </span>
                 </span>

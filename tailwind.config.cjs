@@ -1,9 +1,22 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
+  darkMode: "class",
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {
       colors: {
+        charcoal: {
+          950: "rgb(15 13 13 / <alpha-value>)",
+          900: "rgb(24 21 21 / <alpha-value>)",
+          850: "rgb(30 26 26 / <alpha-value>)",
+          800: "rgb(38 33 33 / <alpha-value>)",
+          750: "rgb(46 40 40 / <alpha-value>)",
+          700: "rgb(56 48 48 / <alpha-value>)",
+        },
+        "rose-text": {
+          DEFAULT: "rgb(232 215 212 / <alpha-value>)",
+          muted: "rgb(176 162 159 / <alpha-value>)",
+        },
         "gray-20": "#F8F4EB",
         "gray-50": "#EFE6E6",
         "gray-100": "#DFCCCC",
@@ -20,8 +33,8 @@ module.exports = {
         "mobile-home": "url('./assets/HomePageGraphic.png')",
       }),
       fontFamily: {
-        dmsans: ["DM Sans", "sans-serif"],
-        montserrat: ["Montserrat", "sans-serif"],
+        inter: ["Inter", "system-ui", "sans-serif"],
+        "bebas-neue": ["Bebas Neue", "system-ui", "sans-serif"],
       },
       content: {
         evolvetext: "url('./assets/EvolveText.png')",

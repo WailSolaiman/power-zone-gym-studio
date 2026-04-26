@@ -10,10 +10,10 @@ type ContactUsProps = {
 };
 
 const fieldClass =
-  "w-full rounded-xl border border-primary-300/45 bg-primary-100/80 px-4 py-3 text-sm text-gray-500 shadow-sm outline-none transition placeholder:text-primary-500/75 focus:border-primary-500/55 focus:bg-primary-100 focus:ring-2 focus:ring-primary-500/30 sm:py-3.5 sm:text-base";
+  "w-full rounded-xl border border-primary-300/45 bg-primary-100/80 px-4 py-3 text-sm text-gray-500 shadow-sm outline-none transition placeholder:text-primary-500/75 focus:border-primary-500/55 focus:bg-primary-100 focus:ring-2 focus:ring-primary-500/30 dark:border-primary-500/35 dark:bg-charcoal-800/90 dark:text-rose-text dark:placeholder:text-rose-text-muted dark:focus:bg-charcoal-800 sm:py-3.5 sm:text-base";
 
 const labelClass =
-  "mb-1.5 block font-montserrat text-xs font-bold uppercase tracking-[0.14em] text-gray-500/75";
+  "mb-1.5 block font-inter text-xs font-semibold uppercase tracking-[0.14em] text-gray-500/75 dark:text-rose-text-muted";
 
 const fade = {
   hidden: { opacity: 0, y: 18 },
@@ -40,7 +40,7 @@ const ContactUs = ({ setSelectedPage }: ContactUsProps) => {
   return (
     <section
       id="contactus"
-      className="border-t border-gray-100 bg-gradient-to-b from-gray-20 via-primary-100/40 to-gray-20"
+      className="border-t border-gray-100 bg-gradient-to-b from-gray-20 via-primary-100/40 to-gray-20 dark:border-charcoal-800 dark:from-charcoal-950 dark:via-charcoal-900 dark:to-charcoal-950"
     >
       <div className="mx-auto min-w-0 max-w-6xl px-4 py-16 sm:px-8 sm:py-20 md:py-24">
         <motion.div
@@ -55,18 +55,21 @@ const ContactUs = ({ setSelectedPage }: ContactUsProps) => {
             transition={{ duration: 0.45 }}
             variants={fade}
           >
-            <p className="font-montserrat text-xs font-bold uppercase tracking-[0.2em] text-primary-500">
+            <p className="font-inter text-xs font-semibold uppercase tracking-[0.2em] text-primary-500">
               Contact
             </p>
-            <h2 className="mt-3 font-montserrat text-3xl font-bold leading-tight tracking-tight text-gray-500 min-[400px]:text-4xl">
+            <h2 className="mt-3 font-inter text-4xl font-bold leading-tight tracking-tight text-gray-500 dark:text-rose-text min-[400px]:text-5xl md:text-6xl">
               <span className="text-primary-500">Say hi</span>
-              <span className="text-gray-500"> — we’ll help you start smart</span>
+              <span className="text-gray-500 dark:text-rose-text">
+                {" "}
+                — we’ll help you start smart
+              </span>
             </h2>
             <div
               className="mt-5 h-1 w-14 rounded-full bg-gradient-to-r from-primary-500 to-secondary-500"
               aria-hidden
             />
-            <p className="mt-6 max-w-prose text-sm leading-relaxed text-gray-500/90 sm:text-base">
+            <p className="mt-6 max-w-prose text-sm leading-relaxed text-gray-500/90 dark:text-rose-text/90 sm:text-base">
               Tell us your goals, your schedule, and what feels intimidating
               (totally normal). Someone from EVOGYM will read it and point you to
               the right intro class, coach, or tour — no pressure, no spammy
@@ -83,7 +86,7 @@ const ContactUs = ({ setSelectedPage }: ContactUsProps) => {
               transition={{ duration: 0.45 }}
               variants={fade}
             >
-              <div className="flex h-full min-h-0 flex-col rounded-3xl border border-gray-100 bg-gray-20/95 p-6 shadow-lg shadow-primary-500/10 ring-1 ring-primary-100/50 sm:p-8">
+              <div className="flex h-full min-h-0 flex-col rounded-3xl border border-gray-100 bg-gray-20/95 p-6 shadow-lg shadow-primary-500/10 ring-1 ring-primary-100/50 dark:border-charcoal-700 dark:bg-charcoal-900/90 dark:ring-charcoal-700 sm:p-8">
                 <form
                   ref={formRef}
                   id="contact-form"
@@ -179,7 +182,7 @@ const ContactUs = ({ setSelectedPage }: ContactUsProps) => {
 
                   <button
                     type="submit"
-                    className="mt-auto w-full min-h-[44px] shrink-0 rounded-lg bg-secondary-500 px-8 py-3 font-montserrat text-sm font-semibold uppercase tracking-wide text-gray-500 transition-colors hover:bg-primary-500 hover:text-white sm:w-auto sm:px-12 sm:text-base"
+                    className="mt-auto w-full min-h-[44px] shrink-0 rounded-lg bg-secondary-500 px-8 py-3 font-inter text-sm font-semibold uppercase tracking-wide text-gray-500 transition-colors hover:bg-primary-500 hover:text-white dark:text-charcoal-950 sm:w-auto sm:px-12 sm:text-base"
                   >
                     Submit
                   </button>
@@ -195,7 +198,7 @@ const ContactUs = ({ setSelectedPage }: ContactUsProps) => {
               transition={{ duration: 0.45, delay: 0.05 }}
               variants={fade}
             >
-              <div className="flex h-full min-h-0 flex-1 items-center justify-center overflow-hidden rounded-2xl border border-gray-100 bg-gray-20/90 shadow-md ring-1 ring-primary-100/40">
+              <div className="flex h-full min-h-0 flex-1 items-center justify-center overflow-hidden rounded-2xl border border-gray-100 bg-gray-20/90 shadow-md ring-1 ring-primary-100/40 dark:border-charcoal-700 dark:bg-charcoal-900/80 dark:ring-charcoal-700">
                 <img
                   src={ContactUsPageGraphic}
                   alt="EVOGYM front desk team welcoming a new member"

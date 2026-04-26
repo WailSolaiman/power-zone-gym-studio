@@ -26,8 +26,10 @@ const Link = ({
   return (
     <AnchorLink
       className={cn(
-        "transition hover:text-primary-300",
-        isActive ? "text-primary-500" : "text-gray-500",
+        "transition hover:text-primary-300 dark:hover:text-primary-300",
+        isActive
+          ? "text-primary-500"
+          : "text-gray-500 dark:text-rose-text/90",
         className
       )}
       href={`#${lowerCasePage}`}

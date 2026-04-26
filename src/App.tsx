@@ -7,6 +7,7 @@ import Benefits from "@/components/benefits";
 import OurClasses from "@/components/ourClasses";
 import ContactUs from "@/components/contactUs";
 import Footer from "./components/footer";
+import ScrollToTop from "@/components/ScrollToTop";
 
 function App() {
   const [selectedPage, setSelectedPage] = useState<SelectedPage>(
@@ -30,7 +31,7 @@ function App() {
   }, []);
 
   return (
-    <div className="App min-w-0 overflow-x-hidden">
+    <div className="App min-h-full min-w-0 overflow-x-hidden bg-gray-20 transition-colors duration-200 dark:bg-charcoal-950">
       <Navbar
         isTopOfPage={isTopOfPage}
         selectedPage={selectedPage}
@@ -41,6 +42,7 @@ function App() {
       <OurClasses setSelectedPage={setSelectedPage} />
       <ContactUs setSelectedPage={setSelectedPage} />
       <Footer />
+      <ScrollToTop />
     </div>
   );
 }

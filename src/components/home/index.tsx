@@ -76,11 +76,12 @@ const Home = ({ setSelectedPage }: HomeProps) => {
   ];
 
   return (
-    <div className="min-w-0 overflow-x-hidden bg-gray-20">
+    <div className="min-w-0 overflow-x-hidden bg-gray-20 dark:bg-charcoal-950">
       <PowerZoneHero
         setSelectedPage={setSelectedPage}
         onViewportEnter={() => setSelectedPage(SelectedPage.Home)}
-        title="EVOGYM. Where you evolve."
+        title="EVOGYM."
+        tagline="Where You Evolve"
         subtitle="Strength, classes, and coaching that meet you where you are — whether it’s your first week back or your next PR. Clear programming, friendly coaches, and a floor that stays busy because people actually show up."
         secondaryLabel="Why EVOGYM"
         secondaryHref={`#${SelectedPage.Benefits}`}
@@ -100,14 +101,14 @@ const Home = ({ setSelectedPage }: HomeProps) => {
 
       <section
         aria-label="Brand partners"
-        className="border-t border-gray-100 bg-gradient-to-b from-primary-100/90 via-gray-20 to-primary-100/60"
+        className="border-t border-gray-100 bg-gradient-to-b from-primary-100/90 via-gray-20 to-primary-100/60 dark:border-charcoal-800 dark:from-charcoal-900 dark:via-charcoal-950 dark:to-charcoal-900"
       >
         <div className="mx-auto w-full max-w-5xl px-5 py-10 sm:px-8 sm:py-12 md:py-14">
           <div className="mx-auto mb-8 max-w-2xl text-center md:mb-10">
-            <p className="font-montserrat text-xs font-bold uppercase tracking-[0.22em] text-primary-500">
+            <p className="font-inter text-xs font-semibold uppercase tracking-[0.22em] text-primary-500">
               Partners & press
             </p>
-            <p className="mt-2 text-sm leading-relaxed text-gray-500/90">
+            <p className="mt-2 text-sm leading-relaxed text-gray-500/90 dark:text-rose-text/90">
               EVOGYM sits alongside names people know from sport and business —
               a nod to how we train, not who you have to be before you walk in.
             </p>

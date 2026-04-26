@@ -53,7 +53,7 @@ const Benefits = ({ setSelectedPage }: BenefitsProps) => {
   return (
     <section
       id="benefits"
-      className="overflow-x-hidden border-t border-gray-100 bg-gradient-to-b from-gray-20 via-primary-100/25 to-gray-20"
+      className="overflow-x-hidden border-t border-gray-100 bg-gradient-to-b from-gray-20 via-primary-100/25 to-gray-20 dark:border-charcoal-800 dark:from-charcoal-950 dark:via-charcoal-900/90 dark:to-charcoal-950"
     >
       <div className="mx-auto min-h-full w-full min-w-0 max-w-6xl px-4 py-14 sm:px-8 sm:py-20 md:py-24">
         <motion.div
@@ -71,13 +71,13 @@ const Benefits = ({ setSelectedPage }: BenefitsProps) => {
               visible: { opacity: 1, y: 0 },
             }}
           >
-            <p className="font-montserrat text-xs font-bold uppercase tracking-[0.2em] text-primary-500">
+            <p className="font-inter text-xs font-semibold uppercase tracking-[0.2em] text-primary-500">
               Why EVOGYM
             </p>
-            <h1 className="mt-3 font-montserrat text-3xl font-bold leading-tight tracking-tight text-gray-500 sm:text-4xl">
+            <h1 className="mt-3 font-bebas-neue text-5xl font-normal uppercase leading-[0.92] tracking-wider text-gray-500 drop-shadow-[0_2px_0_rgb(94_0_0/0.12)] dark:text-rose-text dark:drop-shadow-[0_2px_8px_rgb(0_0_0/0.55)] sm:text-6xl md:text-7xl lg:text-8xl">
               MORE THAN A MEMBERSHIP CARD.
             </h1>
-            <p className="mt-5 max-w-prose text-sm leading-relaxed text-gray-500/90 sm:text-base">
+            <p className="mt-5 max-w-prose text-sm leading-relaxed text-gray-500/90 dark:text-rose-text/90 sm:text-base">
               EVOGYM is built for people who want a plan, a coach in earshot, and
               a floor that feels alive — not a maze of machines and mystery
               programming. Show up, follow the board, ask for a spot, and leave
@@ -106,10 +106,10 @@ const Benefits = ({ setSelectedPage }: BenefitsProps) => {
           {/* Member story: headline + image */}
           <div className="relative mt-16 md:mt-24">
             <div
-              className="pointer-events-none absolute inset-x-4 -top-8 bottom-0 -z-10 rounded-[2rem] bg-primary-100/40 blur-2xl sm:inset-x-8"
+              className="pointer-events-none absolute inset-x-4 -top-8 bottom-0 -z-10 rounded-[2rem] bg-primary-100/40 blur-2xl dark:bg-primary-500/10 sm:inset-x-8"
               aria-hidden
             />
-            <div className="min-w-0 overflow-hidden rounded-3xl border border-gray-100 bg-gradient-to-br from-gray-20 via-primary-100/25 to-gray-20 p-4 shadow-lg shadow-primary-500/10 ring-1 ring-primary-100/50 sm:p-6 md:p-8 lg:p-10 xl:p-12">
+            <div className="min-w-0 overflow-hidden rounded-3xl border border-gray-100 bg-gradient-to-br from-gray-20 via-primary-100/25 to-gray-20 p-4 shadow-lg shadow-primary-500/10 ring-1 ring-primary-100/50 dark:border-charcoal-700 dark:from-charcoal-900 dark:via-charcoal-850 dark:to-charcoal-950 dark:ring-charcoal-700 sm:p-6 md:p-8 lg:p-10 xl:p-12">
               <div className="flex min-w-0 flex-col gap-8 sm:gap-10 lg:gap-12">
                 {/* Headline + stats — full width */}
                 <div className="relative">
@@ -125,10 +125,10 @@ const Benefits = ({ setSelectedPage }: BenefitsProps) => {
                         visible: { opacity: 1, y: 0 },
                       }}
                     >
-                      <p className="font-montserrat text-xs font-bold uppercase tracking-[0.2em] text-primary-500">
+                      <p className="font-inter text-xs font-semibold uppercase tracking-[0.2em] text-primary-500">
                         The EVOGYM floor
                       </p>
-                      <h2 className="mt-3 max-w-4xl text-balance font-montserrat text-2xl font-bold leading-[1.12] tracking-tight text-gray-500 min-[400px]:text-3xl sm:text-4xl lg:text-[2.35rem] lg:leading-[1.1] xl:text-5xl">
+                      <h2 className="mt-3 max-w-4xl text-balance font-bebas-neue text-5xl font-normal uppercase leading-[0.92] tracking-wider text-gray-500 drop-shadow-[0_2px_0_rgb(94_0_0/0.12)] dark:text-rose-text dark:drop-shadow-[0_2px_8px_rgb(0_0_0/0.55)] min-[400px]:text-6xl md:text-7xl lg:text-8xl">
                         <span className="block sm:inline">EVOGYM IS FOR </span>
                         <span className="block sm:inline">
                           EVERY{" "}
@@ -143,13 +143,13 @@ const Benefits = ({ setSelectedPage }: BenefitsProps) => {
                         aria-hidden
                       />
                       <ul className="mt-6 flex flex-wrap gap-2 sm:gap-3">
-                        <li className="rounded-full border border-gray-100 bg-primary-100/80 px-3 py-1.5 text-xs font-semibold uppercase tracking-wide text-gray-500 sm:px-4">
+                        <li className="rounded-full border border-gray-100 bg-primary-100/80 px-3 py-1.5 font-inter text-xs font-semibold uppercase tracking-wide text-gray-500 dark:border-charcoal-700 dark:bg-charcoal-800/90 dark:text-rose-text sm:px-4">
                           Open gym + classes
                         </li>
-                        <li className="rounded-full border border-gray-100 bg-primary-100/80 px-3 py-1.5 text-xs font-semibold uppercase tracking-wide text-gray-500 sm:px-4">
+                        <li className="rounded-full border border-gray-100 bg-primary-100/80 px-3 py-1.5 font-inter text-xs font-semibold uppercase tracking-wide text-gray-500 dark:border-charcoal-700 dark:bg-charcoal-800/90 dark:text-rose-text sm:px-4">
                           Mornings, lunch, nights
                         </li>
-                        <li className="rounded-full border border-gray-100 bg-primary-100/80 px-3 py-1.5 text-xs font-semibold uppercase tracking-wide text-gray-500 sm:px-4">
+                        <li className="rounded-full border border-gray-100 bg-primary-100/80 px-3 py-1.5 font-inter text-xs font-semibold uppercase tracking-wide text-gray-500 dark:border-charcoal-700 dark:bg-charcoal-800/90 dark:text-rose-text sm:px-4">
                           Coaches who answer questions
                         </li>
                       </ul>
@@ -159,19 +159,19 @@ const Benefits = ({ setSelectedPage }: BenefitsProps) => {
 
                 {/* Image first, then body copy; CTA below */}
                 <div className="flex min-w-0 flex-col gap-8 sm:gap-10">
-                  <div className="flex min-w-0 flex-row items-start gap-3 min-[380px]:gap-4 sm:gap-6 md:gap-8 lg:gap-12 xl:gap-14">
+                  <div className="flex min-w-0 flex-col items-stretch gap-6 sm:flex-row sm:items-start sm:gap-6 md:gap-8 lg:gap-12 xl:gap-14">
                     <motion.div
-                      className="w-[5.5rem] shrink-0 min-[380px]:w-28 sm:w-32 md:w-36 lg:w-[11.25rem] xl:w-[12.5rem]"
+                      className="w-full shrink-0 sm:w-32 md:w-36 lg:w-[11.25rem] xl:w-[12.5rem]"
                       initial={{ opacity: 0, y: 24 }}
                       whileInView={{ opacity: 1, y: 0 }}
                       viewport={{ once: true, amount: 0.35 }}
                       transition={{ duration: 0.55 }}
                     >
-                      <div className="relative pt-0.5 lg:pt-1">
+                      <div className="relative w-full pt-0.5 lg:pt-1">
                         <div className="pointer-events-none absolute -inset-1 rounded-[1.15rem] bg-gradient-to-br from-primary-300/50 via-transparent to-secondary-400/30 opacity-80" />
-                        <div className="relative aspect-[3/4] max-h-[11rem] overflow-hidden rounded-2xl shadow-xl shadow-primary-500/15 ring-1 ring-gray-100 min-[380px]:max-h-[13rem] sm:max-h-[15rem] md:max-h-[16.25rem] lg:max-h-[17.5rem]">
+                        <div className="relative w-full overflow-hidden rounded-2xl shadow-xl shadow-primary-500/15 ring-1 ring-gray-100 dark:ring-charcoal-700 sm:aspect-[3/4] sm:max-h-[15rem] md:max-h-[16.25rem] lg:max-h-[17.5rem]">
                           <img
-                            className="h-full w-full object-cover object-center"
+                            className="h-auto w-full object-cover object-center sm:h-full sm:min-h-0"
                             alt="Members training together at EVOGYM"
                             src={BenefitsPageGraphic}
                             loading="lazy"
@@ -181,7 +181,7 @@ const Benefits = ({ setSelectedPage }: BenefitsProps) => {
                     </motion.div>
 
                     <motion.div
-                      className="min-w-0 flex-1"
+                      className="min-w-0 w-full flex-1 sm:w-auto"
                       initial="hidden"
                       whileInView="visible"
                       viewport={{ once: true, amount: 0.45 }}
@@ -191,15 +191,15 @@ const Benefits = ({ setSelectedPage }: BenefitsProps) => {
                         visible: { opacity: 1, y: 0 },
                       }}
                     >
-                      <div className="relative border-l-2 border-primary-300/80 pl-3 sm:pl-5 md:pl-6 lg:py-1">
-                        <p className="max-w-prose text-sm leading-relaxed text-gray-500/95 sm:text-base">
+                      <div className="relative border-t-2 border-primary-300/80 pt-4 sm:border-l-2 sm:border-t-0 sm:pt-0 sm:pl-5 md:pl-6 lg:py-1">
+                        <p className="max-w-prose text-sm leading-relaxed text-gray-500/95 dark:text-rose-text/90 sm:text-base">
                           Whether you’re brand new or back after a long break,
                           EVOGYM is the kind of place where you learn the room: where
                           racks open up, how class sign-ups work, and which coach
                           loves teaching deadlift day. No side-eye for asking how a
                           machine works.
                         </p>
-                        <p className="mt-4 max-w-prose text-sm leading-relaxed text-gray-500/90 sm:text-base">
+                        <p className="mt-4 max-w-prose text-sm leading-relaxed text-gray-500/90 dark:text-rose-text/90 sm:text-base">
                           Bring a friend, come solo, or slip in on a lunch break —
                           the floor stays steady because people treat it like their
                           training home. That’s the EVOGYM deal: consistency over
@@ -211,7 +211,7 @@ const Benefits = ({ setSelectedPage }: BenefitsProps) => {
                   </div>
 
                   <motion.div
-                    className="relative border-t border-gray-100/80 pt-8 md:pt-9"
+                    className="relative border-t border-gray-100/80 pt-8 dark:border-charcoal-700 md:pt-9"
                     initial={{ opacity: 0, y: 12 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true, amount: 0.6 }}
