@@ -13,3 +13,16 @@ body,
   font-family: "Inter", system-ui, sans-serif;
   @apply text-gray-500 dark:bg-charcoal-950 dark:text-rose-text;
 }
+
+/* Hide scrollbar chrome, keep scrolling working */
+html {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+html::-webkit-scrollbar,
+body::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+  display: none;
+}
